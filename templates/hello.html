@@ -7,6 +7,10 @@
     <title>Flask App</title>
   </head>
   <body>
-    <h1>Hello world Platzi 🚀, tu dirección IP es: {{ user_ip }}</h1>
+    {% if user_ip %}
+    <h1>Hola Usuario 🚀, tu dirección IP comprobada es: {{ user_ip }}</h1>
+    {% else %}
+    <a href="{{url_for('index')}}">Ir a Inicio</a>
+    {% endif %}
   </body>
 </html>
