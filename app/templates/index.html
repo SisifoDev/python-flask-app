@@ -8,5 +8,15 @@
   </head>
   <body>
     <h1>{{data.bienvenida}} 🚀</h1>
+    <p>Lista de Cursos:</p>
+    {% if data.numero_cursos > 0 %}
+    <ul>
+      {% for c in data.cursos %}
+      <li>{{c}}</li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <h2>No existen cursos disponibles</h2>
+    {% endif %}
   </body>
 </html>
